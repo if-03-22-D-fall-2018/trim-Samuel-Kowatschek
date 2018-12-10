@@ -10,3 +10,25 @@
  * Test functions for trim.h
  * ----------------------------------------------------------
  */
+
+#include "trim.h"
+#include <stdbool.h>
+
+void trim(const char *source, char *trimmed_string){
+  bool shouldTrim=true;
+  int trimPos=0;
+  int count=0;
+  for (int i = 0; i < STRLEN-1; i++) {
+    if(source[i]==’ ’ && shouldTrim){
+      if(source[i+1]=’ ’){
+        shouldTrim=true;
+      }else{
+        shouldTrim=false;
+      }
+    }else{
+      trimmed_string[count]=source[i];
+      count++;
+    }
+  }
+
+}
