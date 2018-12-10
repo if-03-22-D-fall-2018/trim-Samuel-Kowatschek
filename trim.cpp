@@ -14,6 +14,9 @@
 #include <string.h>
 #include "trim.h"
 
+//Einschränkung des Gültigkeitbereiches: Ich habe 2 Variablen start und end, start muss min 0 sein(start des arrays) und
+//end kann höchstens die stringlänge - 1 sein. Die Funktionen mit denen ich diese Variablen ändere sind static und können
+//nicht von außen zugegriffen werden und gelten nur in dieser File.
 
  void trim(const char *source, char *trimmed_string){
    int start=0;
